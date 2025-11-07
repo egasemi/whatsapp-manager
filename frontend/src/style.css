@@ -1,0 +1,78 @@
+:root {
+  --bg: #f5f6fa;
+  --fg: #1e1e1e;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --error: #dc2626;
+  --border: #d1d5db;
+  --radius: 8px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+input, button {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Reutilizables */
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.75rem;
+  background: var(--white);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.button {
+  background: var(--accent);
+  color: var(--white);
+  font-weight: 600;
+  padding: 0.6rem;
+  border: none;
+  border-radius: var(--radius);
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: var(--accent-hover);
+}
+
+.button.red {
+  background: var(--error);
+}
+
+.button.red:hover {
+  background: #b91c1c;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "whatsapp-manager-front",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "socket.io-client": "^4.8.1",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "autoprefixer": "^10.4.21",
+    "patch-package": "^8.0.1",
+    "postcss": "^8.5.6",
+    "vite": "^7.1.7"
+  }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>QR WhatsApp</title>
+  </head>
+  <body>
+    <h1>Conexión WhatsApp</h1>
+    <div id="status">Esperando conexión...</div>
+    <img id="qr" width="300" />
+
+    <script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
+    <script>
+      const socket = io("http://localhost:4000");
+
+      socket.on("qr", ({ sessionId, qr }) => {
+        document.getElementById("qr").src = qr;
+        document.getElementById("status").textContent = `Escaneá el QR de la sesión ${sessionId}`;
+      });
+
+      socket.on("status", ({ sessionId, message }) => {
+        document.getElementById("status").textContent = `${sessionId}: ${message}`;
+      });
+    </script>
+  </body>
+</html>
